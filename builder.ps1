@@ -68,24 +68,35 @@ $branches_json = Get-API-Response -api_url "/v0.1/apps/$($user_json.name)/$($app
 $report_name = "Report-" + (Get-Date -UFormat %Y.%m.%d-%H.%M.%S)
 
 # REPORT table head
-$table_head = "<table border='1'>
+$table_head = "<style>
+table {border-collapse: collapse;}
+table, th, td {border: 1px solid #555;}
+td {width: 160px; padding: 2px;}
+</style>
+<h1>$($report_name)</h1>
+<table>
     <tr>
-        <td>Branch name</td>
-        <td>Build status</td>
-        <td>Duration</td>
-        <td>Link to build logs</td>
+        <td><strong>Branch name</strong></td>
+        <td><strong>Build status</strong></td>
+        <td><strong>Duration</strong></td>
+        <td><strong>Link to build logs</strong></td>
     </tr>`n" | out-file $PSScriptRoot\builds\$report_name.html -append
 
 # Generate REPORT body
 foreach($branch in $branches_json) {
     # Build Duration
-    $duration = ($branch.lastBuild.finishTime | Get-Date) - ($branch.lastBuild.startTime | Get-Date)
+    $duration = New-TimeSpan -Start $branch.lastBuild.startTime -End $branch.lastBuild.finishTime
 
     # Get link to logfile
     $log_link = "https://appcenter.ms/download?url=/v0.1/apps/$($user_json.name)/$($apps_json.name)/builds/$($branch.lastBuild.id)/downloads/logs"
 
     # Table Row
-    $row = "<tr><td>$($branch.branch.name)</td><td>$($branch.lastBuild.result)</td><td>$($duration.Seconds)</td><td><a href='$($log_link)'>Get log archive</a></td></tr>`n"
+    $row = "<tr>
+        <td>$($branch.branch.name)</td>
+        <td>$($branch.lastBuild.result)</td>
+        <td>$($duration)</td>
+        <td><a href='$($log_link)'>Download log archive</a></td>
+    </tr>`n"
 
     # Write to file
     $row | out-file $PSScriptRoot\builds\$report_name.html -append
