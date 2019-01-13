@@ -14,22 +14,27 @@ $builds_folder = Test-Path $PSScriptRoot\builds -PathType Container
 
 # Connect to AppCenter API and return response
 function Get-API-Response {
-Param ([string]$api_url, [string]$method)
+Param ([string]$api_url, [string]$method, [string]$body)
 
     # Api URL
     $api_url = "https://api.appcenter.ms" + $api_url
 
     # Headers
     $headers = @{
-        "Accept"="application/json"
-        "X-API-Token"=$api_token_RO
+        "Accept" = "application/json"
+        "X-API-Token" = $api_token
     }
 
     # Init SSL connection
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-    # If Authorized successfully, get response
-    $response = Invoke-WebRequest -Uri $api_url -Method $method -Headers $headers
+    # If Authorized successfully, get/post response
+    if(!$body) {
+        $response = Invoke-WebRequest -Uri $api_url -Method $method -Headers $headers
+    }
+    else {
+        $response = Invoke-WebRequest -Uri $api_url -Method $method -Headers $headers -Body ($body | ConvertTo-Json)
+    }
 
     # $response
         if ($response.StatusCode -eq 200) {
@@ -59,8 +64,6 @@ $apps_json = Get-API-Response -api_url "/v0.1/apps" -method "Get"
 
 # Get available branches
 $branches_json = Get-API-Response -api_url "/v0.1/apps/$($user_json.name)/$($apps_json.name)/branches" -method "Get"
-
-
 
 # -------------- REPORT --------------
 
@@ -107,6 +110,18 @@ foreach($branch in $branches_json) {
 $table_footer = "</table>" | out-file $PSScriptRoot\builds\$report_name.html -append
 
 # ------------- END REPORT ------------
+
+# Body of build query
+$build_body = @{
+    "sourceVersion" = $branch.lastBuild.sourceVersion
+    "debug" = $TRUE
+}
+# build with last in array branch (huh, it's testing)
+$build_branch = Get-API-Response -api_url "/v0.1/apps/$($user_json.name)/$($apps_json.name)/branches/$($branch.branch.name)/builds" -method "Post" -body $build_body
+
+
+"Complite"
+
 }
 
 Catch {
@@ -131,6 +146,6 @@ Finally {
 $response = ""
 $content_json = ""
 $branches_json = ""
-$branch = ""
+#$branch = ""
 $file_dt = ""
 }
