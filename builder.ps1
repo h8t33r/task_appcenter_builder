@@ -48,6 +48,7 @@ Param ([string]$api_url, [string]$method)
 
 Try {
 
+# Create /logs and /builds folders if they not exist
 Create-Folders
 
 # Get current user info
@@ -58,10 +59,43 @@ $apps_json = Get-API-Response -api_url "/v0.1/apps" -method "Get"
 
 # Get available branches
 $branches_json = Get-API-Response -api_url "/v0.1/apps/$($user_json.name)/$($apps_json.name)/branches" -method "Get"
-$branches_json
 
-$data_time = Get-Date -Format g
-$data_time + " | " + $branches_json | out-file $PSScriptRoot\logs\builds.log -append
+
+
+# -------------- REPORT --------------
+
+# Init Date Format to REPORT file
+$report_name = "Report-" + (Get-Date -UFormat %Y.%m.%d-%H.%M.%S)
+
+# REPORT table head
+$table_head = "<table border='1'>
+    <tr>
+        <td>Branch name</td>
+        <td>Build status</td>
+        <td>Duration</td>
+        <td>Link to build logs</td>
+    </tr>`n" | out-file $PSScriptRoot\builds\$report_name.html -append
+
+# Generate REPORT body
+foreach($branch in $branches_json) {
+    # Build Duration
+    $duration = ($branch.lastBuild.finishTime | Get-Date) - ($branch.lastBuild.startTime | Get-Date)
+
+    # Get link to logfile
+    $log_link = "https://appcenter.ms/download?url=/v0.1/apps/$($user_json.name)/$($apps_json.name)/builds/$($branch.lastBuild.id)/downloads/logs"
+
+    # Table Row
+    $row = "<tr><td>$($branch.branch.name)</td><td>$($branch.lastBuild.result)</td><td>$($duration.Seconds)</td><td><a href='$($log_link)'>Get log archive</a></td></tr>`n"
+
+    # Write to file
+    $row | out-file $PSScriptRoot\builds\$report_name.html -append
+
+}
+
+# REPORT table footer
+$table_footer = "</table>" | out-file $PSScriptRoot\builds\$report_name.html -append
+
+# ------------- END REPORT ------------
 }
 
 Catch {
@@ -85,5 +119,7 @@ Finally {
 
 $response = ""
 $content_json = ""
-
+$branches_json = ""
+$branch = ""
+$file_dt = ""
 }
