@@ -1,5 +1,5 @@
 # Microsoft AppCneter Full Access Authorize Token
-$api_token = "d5b1300bab3671d2adf0eb24714c64f11ccdf0ea"
+$api_token = ""
 # Microsoft AppCneter Read Only Token Authorize Token
 $api_token_RO = "5945e988813567c0ef6537caea8f5f327d95c10d"
 
