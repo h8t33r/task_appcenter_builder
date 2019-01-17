@@ -1,13 +1,13 @@
 # ver. 0.3
 
 # Microsoft AppCneter - Full Access Authorize Token
-[string] $apiTokenFA = "d2934eef6b48331fa66fc08b21e4911e7cc97f18"
+[string] $apiTokenFA = "d2934eef6b48331fa76fc08b21e4911f7cc97f18"
 
 # Microsoft AppCneter - Read Only Authorize Token
-[string] $apiTokenRO = "5945e988813567c0ef6537caea8f5f327d95c10d"
+[string] $apiTokenRO = "5945e988813567c0eg6537caea8f5f327d95c10d"
 
 # Microsoft AppCneter - Application Name
-[string] $applicationName = "Damaten-CLub-App"
+[string] $applicationName = "Example-App"
 
 [int] $sleepInSeconds = 10
 

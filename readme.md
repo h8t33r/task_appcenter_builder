@@ -64,14 +64,14 @@ Check the availability of logs and reports directories . If absent - create it.
 5. Return result
 6. Catch exceptions if they occur
 
-### Inside Try { } блока
+### Inside Try { } block
 1. Get the data of the user whose token was specified in [string] $apiTokenFA.
 2. Get a list of application repository branches specified in [string] $ applicationName
 3. Set Report file name
 4. In the foreach block we check that the branch is ready for building, get the sourceVersion from Url; form the body of the Post request, call the Build-Task
 
-### Inside Catch { } блока
+### Inside Catch { } block
 To catch exceptions and write to the log.
 
-### Inside Finally { } блока
+### Inside Finally { } block
 Reset some variables, to avoid errors when running the script in the same environment PowerShell
