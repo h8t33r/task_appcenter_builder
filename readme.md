@@ -1,5 +1,5 @@
 # PowerShell Builder for Microsoft AppCenter
-Version: 0.3
+Version: 0.4
 
 The script starts the application build process in the Microsoft Application Center.
 
@@ -10,21 +10,15 @@ Script environment:  Windows 10 / PowerShell 5.1
 
 [Microsoft AppCenter API](https://openapi.appcenter.ms/#/)
 
-
 ## Usage
-1. Enter the 40-character token. Token generated in AppCenter user settings. For example:
-```
-[string] $apiTokenFA = "d2934eef6b48331fa66fc08b21e4911e7cc97f18"
-```
-2. Enter the Application name.
-```
+1. For more security, the token is now stored in user environment variables.
+Run register-token.ps1 and enter the 40-character token. Token generated in AppCenter user settings.
+
+2. Enter the Application name in builder.ps1.
+```powershell
 [string] $applicationName = "Example-Application"
 ```
-3. Enter the build cycle checking time in seconds.
-```
-[int] $sleepInSeconds = 10
-```
-4. Run script
+3. Run script
 
 ## Documentation
 
@@ -38,7 +32,7 @@ Script environment:  Windows 10 / PowerShell 5.1
 
 [string] $applicationName - Microsoft AppCneter - Application Name
 
-[int] $sleepInSeconds - Build cycle checking time in seconds.
+[int] $sleepInSeconds - Build ineration checking time in seconds.
 
 Also set the pathes for logs and report templates.
 

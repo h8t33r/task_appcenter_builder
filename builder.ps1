@@ -1,10 +1,10 @@
 # ver. 0.3
 
 # Microsoft AppCneter - Full Access Authorize Token
-[string] $apiTokenFA = "d2934eef6b48331fa76fc08b21e4911f7cc97f18"
+[string] $apiTokenFA = [Environment]::GetEnvironmentVariable("apiTokenFA", "User")
 
 # Microsoft AppCneter - Read Only Authorize Token
-[string] $apiTokenRO = "5945e988813567c0eg6537caea8f5f327d95c10d"
+[string] $apiTokenRO = ""
 
 # Microsoft AppCneter - Application Name
 [string] $applicationName = "Example-App"
@@ -104,13 +104,16 @@ Param ([string]$taskUserName, [string]$taskAppName, [string]$taskBranchName, [ha
         # Status Codes: [notStarted, inProgress, complited]
 
 
-        $duration = New-TimeSpan -Start $res.startTime -End $res.finishTime
+        $durationRaw = New-TimeSpan -Start $res.startTime -End $res.finishTime
+        $duration = $durationRaw.ToString().split(".")[0]
+
         $logLink = "https://appcenter.ms/download?url=/v0.1/apps/$($taskUserName)/$($taskAppName)/builds/$($res.id)/downloads/logs"
 
         [hashtable] $buildResult = @{
             "Branch" = $res.sourceBranch
             "Result" = $res.result
-            "sourceVersion" = $res.sourceVersion
+            "SourceVersion" = $res.sourceVersion
+            "Duration" = $duration
             "Link" = $logLink
         }
 
@@ -118,7 +121,7 @@ Param ([string]$taskUserName, [string]$taskAppName, [string]$taskBranchName, [ha
             <td>$($res.sourceBranch)</td>
             <td>$($res.result)</td>
             <td>$($duration)</td>
-            <td><a href=`"$($logLink)`">Download log archive</a></td>
+            <td><a href=`"$($logLink)`">Download log #$($res.id)</a></td>
          </tr>" | out-file $buildsPath\$reportName -append
         $res| out-file $taskDebugLogPath -append
         return $buildResult | ConvertTo-Json
@@ -147,6 +150,7 @@ $reportName = "Report-" + (Get-Date -UFormat %Y.%m.%d-%H.%M.%S) + ".html"
 #---------------------------------------------------------------
 $reportHeader | out-file $buildsPath\$reportName -append
 foreach($row in $branchesJSON) {
+    # Check branch is configured
     if ($row.configured -ne $false) {
         # Get branch source version to build 
         $sourceVersion = $row.branch.commit.url.Substring($row.branch.commit.url.Length -40, 40)
