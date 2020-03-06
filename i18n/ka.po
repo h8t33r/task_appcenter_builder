@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-03-06 09:29+0000\n"
+"PO-Revision-Date: 2020-03-06 10:54+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.10.2\n"
+
+#. type: Plain text
+#: readme.md:3
+msgid "# PowerShell Builder for Microsoft AppCenter Version: 0.4"
+msgstr ""
+
+#. type: Plain text
+#: readme.md:5
+msgid ""
+"The script starts the application build process in the Microsoft Application "
+"Center."
+msgstr ""
+
+#. type: Plain text
+#: readme.md:7
+msgid "Script environment: Windows 10 / PowerShell 5.1"
+msgstr ""
+
+#. type: Plain text
+#: readme.md:10
+msgid "## Links [Microsoft AppCenter](https://appcenter.ms/)"
+msgstr ""
+
+#. type: Plain text
+#: readme.md:12
+msgid "[Microsoft AppCenter API](https://openapi.appcenter.ms/#/)"
+msgstr ""
+
+#. type: Plain text
+#: readme.md:16
+msgid ""
+"## Usage 1. For more security, the token is now stored in user environment "
+"variables.  Run register-token.ps1 and enter the 40-character token. Token "
+"generated in AppCenter user settings."
+msgstr ""
+
+#. type: Plain text
+#: readme.md:22
+#, no-wrap
+msgid ""
+"2. Enter the Application name in builder.ps1.\n"
+"```powershell\n"
+"[string] $applicationName = \"Example-Application\"\n"
+"```\n"
+"3. Run script\n"
+msgstr ""
+
+#. type: Plain text
+#: readme.md:24
+msgid "## Documentation"
+msgstr ""
+
+#. type: Plain text
+#: readme.md:26
+msgid "### Before Try { } block:"
+msgstr ""
+
+#. type: Plain text
+#: readme.md:28
+msgid "#### 1. Initialize variables"
+msgstr ""
+
+#. type: Plain text
+#: readme.md:30
+msgid "[string] $apiTokenFA - Full Access Authorize Token"
+msgstr ""
+
+#. type: Plain text
+#: readme.md:32
+msgid "[string] $apiTokenRO - Read Only Authorize Token"
+msgstr ""
+
+#. type: Plain text
+#: readme.md:34
+msgid "[string] $applicationName - Microsoft AppCneter - Application Name"
+msgstr ""
+
+#. type: Plain text
+#: readme.md:36
+msgid "[int] $sleepInSeconds - Build ineration checking time in seconds."
+msgstr ""
+
+#. type: Plain text
+#: readme.md:38
+msgid "Also set the pathes for logs and report templates."
+msgstr ""
+
+#. type: Plain text
+#: readme.md:40
+msgid "#### 2. Functions"
+msgstr ""
+
+#. type: Plain text
+#: readme.md:42
+msgid "##### Create-Folders { }"
+msgstr ""
+
+#. type: Plain text
+#: readme.md:44
+msgid ""
+"Check the availability of logs and reports directories . If absent - create "
+"it."
+msgstr ""
+
+#. type: Plain text
+#: readme.md:52
+msgid ""
+"##### Get-API-Response { } 1. Set AppCenter API root url 2. Set HTTP Headers "
+"varitable 3. Initiate SSL connection (TLS 1.2)  4. Choosing which method to "
+"use: GET of POST. If post - add \"Content-Type\" 5. Write the Log 6. Return "
+"JSON type Response"
+msgstr ""
+
+#. type: Plain text
+#: readme.md:60
+msgid ""
+"##### Build-Task { } 1. Use Try block 2. Run the application build process "
+"by calling the function Get-API-Response 3. Inside the loop, checking the "
+"build task has completed 4. Write HTML report row in file 5. Return result "
+"6. Catch exceptions if they occur"
+msgstr ""
+
+#. type: Plain text
+#: readme.md:66
+msgid ""
+"### Inside Try { } block 1. Get the data of the user whose token was "
+"specified in [string] $apiTokenFA.  2. Get a list of application repository "
+"branches specified in [string] $ applicationName 3. Set Report file name "
+"4. In the foreach block we check that the branch is ready for building, get "
+"the sourceVersion from Url; form the body of the Post request, call the "
+"Build-Task"
+msgstr ""
+
+#. type: Plain text
+#: readme.md:69
+msgid "### Inside Catch { } block To catch exceptions and write to the log."
+msgstr ""
+
+#. type: Plain text
+#: readme.md:71
+msgid ""
+"### Inside Finally { } block Reset some variables, to avoid errors when "
+"running the script in the same environment PowerShell"
+msgstr ""
