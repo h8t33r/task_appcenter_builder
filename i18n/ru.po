@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-03-06 09:29+0000\n"
-"PO-Revision-Date: 2020-03-06 09:59+0000\n"
+"PO-Revision-Date: 2020-03-06 10:54+0000\n"
 "Last-Translator: Igor Tsarkov <igor.tsarkov@zyfra.com>\n"
 "Language-Team: Russian <http://192.168.101.38/projects/test/t2/ru/>\n"
 "Language: ru\n"
@@ -21,7 +21,7 @@ msgstr ""
 #. type: Plain text
 #: readme.md:3
 msgid "# PowerShell Builder for Microsoft AppCenter Version: 0.4"
-msgstr ""
+msgstr "# Сборщик проектов для Microsoft AppCenter. Версия: 0.4"
 
 #. type: Plain text
 #: readme.md:5
