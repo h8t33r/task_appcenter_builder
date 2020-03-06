@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-03-06 13:05+0000\n"
-"PO-Revision-Date: 2020-03-06 13:17+0000\n"
+"PO-Revision-Date: 2020-03-06 13:20+0000\n"
 "Last-Translator: Igor Tsarkov <igor.tsarkov@zyfra.com>\n"
 "Language-Team: Russian <http://192.168.101.38/projects/test/t2w2/ru/>\n"
 "Language: ru\n"
@@ -61,7 +61,7 @@ msgstr ""
 #: ./readme.md:13
 #, no-wrap
 msgid "Usage"
-msgstr ""
+msgstr "Использование"
 
 #. type: Plain text
 #: ./readme.md:16
@@ -282,4 +282,4 @@ msgstr ""
 #. type: Plain text
 #: ./r2.md:7
 msgid "Hello weblate ```bash mv /etc /tpm ``` - hurr - durr"
-msgstr ""
+msgstr "Привет веблейт```bash mv /etc /tpm ``` - хурр - дурр"
