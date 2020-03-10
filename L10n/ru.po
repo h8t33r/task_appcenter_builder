@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-03-10 07:53+0000\n"
-"PO-Revision-Date: 2020-03-10 08:00+0000\n"
+"PO-Revision-Date: 2020-03-10 14:01+0000\n"
 "Last-Translator: Igor Tsarkov <igor.tsarkov@zyfra.com>\n"
 "Language-Team: Russian <http://192.168.101.38/projects/test/markdown-doc/ru/>"
 "\n"
@@ -23,12 +23,12 @@ msgstr ""
 #: ./readme.md:1
 #, no-wrap
 msgid "PowerShell Builder for Microsoft AppCenter"
-msgstr ""
+msgstr "# Сборщик проектов для Microsoft AppCenter"
 
 #. type: Plain text
 #: ./readme.md:3
 msgid "Version: 0.4"
-msgstr ""
+msgstr "Версия: 0.4"
 
 #. type: Plain text
 #: ./readme.md:5
@@ -36,11 +36,12 @@ msgid ""
 "The script starts the application build process in the Microsoft Application "
 "Center."
 msgstr ""
+"Скрипт запускает процесс сборки приложения в Microsoft Application Center."
 
 #. type: Plain text
 #: ./readme.md:7
 msgid "Script environment: Windows 10 / PowerShell 5.1"
-msgstr ""
+msgstr "Окружения для запуска: Windows 10 / PowerShell 5.1"
 
 #. type: Title ##
 #: ./readme.md:8
@@ -50,13 +51,15 @@ msgstr "Ссылки"
 
 #. type: Plain text
 #: ./readme.md:10
+#, fuzzy
 msgid "[Microsoft AppCenter](https://appcenter.ms/)"
-msgstr ""
+msgstr "[Microsoft AppCenter](https://appcenter.ms/)"
 
 #. type: Plain text
 #: ./readme.md:12
+#, fuzzy
 msgid "[Microsoft AppCenter API](https://openapi.appcenter.ms/#/)"
-msgstr ""
+msgstr "[Microsoft AppCenter API](https://openapi.appcenter.ms/#/)"
 
 #. type: Title ##
 #: ./readme.md:13
@@ -73,6 +76,9 @@ msgid ""
 "Run register-token.ps1 and enter the 40-character token. Token generated in "
 "AppCenter user settings.\n"
 msgstr ""
+"1. Для большей безопасности токен теперь хранится в переменной окружения.\n"
+"Запустите register-token.ps1 и введите 40-символьный токен. Токен "
+"генерируется в настройках AppCenter.\n"
 
 #. type: Plain text
 #: ./readme.md:22
@@ -106,27 +112,27 @@ msgstr "До блока Try { }:"
 #: ./readme.md:27
 #, no-wrap
 msgid "1. Initialize variables"
-msgstr ""
+msgstr "1. Инициализируйте переменные"
 
 #. type: Plain text
 #: ./readme.md:30
 msgid "[string] $apiTokenFA - Full Access Authorize Token"
-msgstr ""
+msgstr "[string] $apiTokenFA - Токен для полного доступа"
 
 #. type: Plain text
 #: ./readme.md:32
 msgid "[string] $apiTokenRO - Read Only Authorize Token"
-msgstr ""
+msgstr "[string] $apiTokenRO - Токен для доступа только для чтения"
 
 #. type: Plain text
 #: ./readme.md:34
 msgid "[string] $applicationName - Microsoft AppCneter - Application Name"
-msgstr ""
+msgstr "[string] $applicationName - Microsoft AppCneter - Имя приложения"
 
 #. type: Plain text
 #: ./readme.md:36
 msgid "[int] $sleepInSeconds - Build ineration checking time in seconds."
-msgstr ""
+msgstr "[int] $sleepInSeconds - Время в секундах между проверками билда."
 
 #. type: Plain text
 #: ./readme.md:38
@@ -137,13 +143,13 @@ msgstr ""
 #: ./readme.md:39
 #, no-wrap
 msgid "2. Functions"
-msgstr ""
+msgstr "2. Методы"
 
 #. type: Title #####
 #: ./readme.md:41
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Create-Folders { }"
-msgstr ""
+msgstr "Create-Folders { }"
 
 #. type: Plain text
 #: ./readme.md:44
@@ -151,17 +157,19 @@ msgid ""
 "Check the availability of logs and reports directories . If absent - create "
 "it."
 msgstr ""
+"Проверяет доступность директорий для записи логов и отчетов. Если недоступны "
+"- создает их."
 
 #. type: Title #####
 #: ./readme.md:45
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Get-API-Response { }"
-msgstr ""
+msgstr "Get-API-Response { }"
 
 #. type: Bullet: '1. '
 #: ./readme.md:52
 msgid "Set AppCenter API root url"
-msgstr ""
+msgstr "Выставить AppCenter API root url"
 
 #. type: Bullet: '2. '
 #: ./readme.md:52
@@ -171,7 +179,7 @@ msgstr ""
 #. type: Bullet: '3. '
 #: ./readme.md:52
 msgid "Initiate SSL connection (TLS 1.2)"
-msgstr ""
+msgstr "Инициализация SSL соединения (TLS 1.2)"
 
 #. type: Bullet: '4. '
 #: ./readme.md:52
