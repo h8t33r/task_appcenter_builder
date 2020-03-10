@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-03-10 07:53+0000\n"
-"PO-Revision-Date: 2020-03-10 14:01+0000\n"
+"PO-Revision-Date: 2020-03-11 07:01+0000\n"
 "Last-Translator: Igor Tsarkov <igor.tsarkov@zyfra.com>\n"
 "Language-Team: Russian <http://192.168.101.38/projects/test/markdown-doc/ru/>"
 "\n"
@@ -23,7 +23,7 @@ msgstr ""
 #: ./readme.md:1
 #, no-wrap
 msgid "PowerShell Builder for Microsoft AppCenter"
-msgstr "# Сборщик проектов для Microsoft AppCenter"
+msgstr "Сборщик проектов для Microsoft AppCenter"
 
 #. type: Plain text
 #: ./readme.md:3
@@ -47,7 +47,7 @@ msgstr "Окружения для запуска: Windows 10 / PowerShell 5.1"
 #: ./readme.md:8
 #, no-wrap
 msgid "Links"
-msgstr "Ссылки"
+msgstr "Ссылочки"
 
 #. type: Plain text
 #: ./readme.md:10
@@ -137,7 +137,7 @@ msgstr "[int] $sleepInSeconds - Время в секундах между про
 #. type: Plain text
 #: ./readme.md:38
 msgid "Also set the pathes for logs and report templates."
-msgstr ""
+msgstr "Так же определяются пути для логов и шаблон отчета."
 
 #. type: Title ####
 #: ./readme.md:39
@@ -147,9 +147,9 @@ msgstr "2. Методы"
 
 #. type: Title #####
 #: ./readme.md:41
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Create-Folders { }"
-msgstr "Create-Folders { }"
+msgstr "Метод Create-Folders { }"
 
 #. type: Plain text
 #: ./readme.md:44
@@ -162,9 +162,9 @@ msgstr ""
 
 #. type: Title #####
 #: ./readme.md:45
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Get-API-Response { }"
-msgstr "Get-API-Response { }"
+msgstr "Метод Get-API-Response { }"
 
 #. type: Bullet: '1. '
 #: ./readme.md:52
@@ -174,7 +174,7 @@ msgstr "Выставить AppCenter API root url"
 #. type: Bullet: '2. '
 #: ./readme.md:52
 msgid "Set HTTP Headers varitable"
-msgstr ""
+msgstr "Определяется HTTP заголовок"
 
 #. type: Bullet: '3. '
 #: ./readme.md:52
@@ -189,7 +189,7 @@ msgstr ""
 #. type: Bullet: '5. '
 #: ./readme.md:52
 msgid "Write the Log"
-msgstr ""
+msgstr "Пишет в лог"
 
 #. type: Bullet: '6. '
 #: ./readme.md:52
@@ -253,7 +253,7 @@ msgstr ""
 #. type: Bullet: '3. '
 #: ./readme.md:66
 msgid "Set Report file name"
-msgstr ""
+msgstr "Определяем имя отчета"
 
 #. type: Bullet: '4. '
 #: ./readme.md:66
@@ -267,18 +267,18 @@ msgstr ""
 #: ./readme.md:67
 #, no-wrap
 msgid "Inside Catch { } block"
-msgstr ""
+msgstr "Внутри блока Catch { }"
 
 #. type: Plain text
 #: ./readme.md:69
 msgid "To catch exceptions and write to the log."
-msgstr ""
+msgstr "Отлавливает исключения и записывает в лог."
 
 #. type: Title ###
 #: ./readme.md:70
 #, no-wrap
 msgid "Inside Finally { } block"
-msgstr ""
+msgstr "Внутри блока Finally { }"
 
 #. type: Plain text
 #: ./readme.md:71
@@ -291,9 +291,13 @@ msgstr ""
 #: ./r2.md:1
 #, no-wrap
 msgid "Test md file"
-msgstr ""
+msgstr "Тестовый md файл"
 
 #. type: Plain text
 #: ./r2.md:7
 msgid "Hello weblate ```bash mv /etc /tpm ``` - hurr - durr"
 msgstr ""
+"Привет веблейт\n"
+"```bash mv /etc /tpm ```\n"
+"- хурр\n"
+"- дурр"
