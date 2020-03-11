@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-03-10 07:53+0000\n"
-"PO-Revision-Date: 2020-03-11 07:01+0000\n"
+"PO-Revision-Date: 2020-03-11 07:16+0000\n"
 "Last-Translator: Igor Tsarkov <igor.tsarkov@zyfra.com>\n"
 "Language-Team: Russian <http://192.168.101.38/projects/test/markdown-doc/ru/>"
 "\n"
@@ -286,6 +286,8 @@ msgid ""
 "Reset some variables, to avoid errors when running the script in the same "
 "environment PowerShell"
 msgstr ""
+"Обнуление переменных, чтобы избежать проблем при запуске скрипта в окружении "
+"PowerShell"
 
 #. type: Title #
 #: ./r2.md:1
