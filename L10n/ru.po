@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-03-10 07:53+0000\n"
-"PO-Revision-Date: 2020-03-11 07:23+0000\n"
+"PO-Revision-Date: 2020-03-11 07:32+0000\n"
 "Last-Translator: Igor Tsarkov <igor.tsarkov@zyfra.com>\n"
 "Language-Team: Russian <http://192.168.101.38/projects/test/markdown-doc/ru/>"
 "\n"
@@ -56,9 +56,8 @@ msgstr "[Майкрософт AppCenter](https://appcenter.ms/)"
 
 #. type: Plain text
 #: ./readme.md:12
-#, fuzzy
 msgid "[Microsoft AppCenter API](https://openapi.appcenter.ms/#/)"
-msgstr "[Microsoft AppCenter API](https://openapi.appcenter.ms/#/)"
+msgstr "[Майкрософт AppCenter API](https://openapi.appcenter.ms/#/)"
 
 #. type: Title ##
 #: ./readme.md:13
