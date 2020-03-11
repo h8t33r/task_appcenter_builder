@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-03-10 07:53+0000\n"
-"PO-Revision-Date: 2020-03-11 09:00+0000\n"
-"Last-Translator: Igor Tsarkov <igor.tsarkov@zyfra.com>\n"
+"PO-Revision-Date: 2020-03-11 09:38+0000\n"
+"Last-Translator: Roman Blinov <roman.blinov@zyfra.com>\n"
 "Language-Team: Russian <http://192.168.101.38/projects/test/markdown-doc/ru/>"
 "\n"
 "Language: ru\n"
@@ -200,12 +200,12 @@ msgstr "Возвращает ответ в формате JSON"
 #: ./readme.md:53
 #, no-wrap
 msgid "Build-Task { }"
-msgstr ""
+msgstr "Build-Task { }"
 
 #. type: Bullet: '1. '
 #: ./readme.md:60
 msgid "Use Try block"
-msgstr ""
+msgstr "Внутри блока Try"
 
 #. type: Bullet: '2. '
 #: ./readme.md:60
