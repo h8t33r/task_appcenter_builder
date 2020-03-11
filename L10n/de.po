@@ -7,28 +7,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-03-10 07:53+0000\n"
-"PO-Revision-Date: 2020-03-11 09:38+0000\n"
-"Last-Translator: Roman Blinov <roman.blinov@zyfra.com>\n"
-"Language-Team: Russian <http://192.168.101.38/projects/test/markdown-doc/ru/>"
+"PO-Revision-Date: 2020-03-11 09:04+0000\n"
+"Last-Translator: Igor Tsarkov <igor.tsarkov@zyfra.com>\n"
+"Language-Team: German <http://192.168.101.38/projects/test/markdown-doc/de/>"
 "\n"
-"Language: ru\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.10.2\n"
 
 #. type: Title #
 #: ./readme.md:1
 #, no-wrap
 msgid "PowerShell Builder for Microsoft AppCenter"
-msgstr "Сборщик проектов для Microsoft AppCenter"
+msgstr ""
 
 #. type: Plain text
 #: ./readme.md:3
 msgid "Version: 0.4"
-msgstr "Версия: 0.4"
+msgstr ""
 
 #. type: Plain text
 #: ./readme.md:5
@@ -36,34 +35,33 @@ msgid ""
 "The script starts the application build process in the Microsoft Application "
 "Center."
 msgstr ""
-"Скрипт запускает процесс сборки приложения в Microsoft Application Center."
 
 #. type: Plain text
 #: ./readme.md:7
 msgid "Script environment: Windows 10 / PowerShell 5.1"
-msgstr "Окружения для запуска: Windows 10 / PowerShell 5.1"
+msgstr ""
 
 #. type: Title ##
 #: ./readme.md:8
 #, no-wrap
 msgid "Links"
-msgstr "Ссылочки"
+msgstr "Platz"
 
 #. type: Plain text
 #: ./readme.md:10
 msgid "[Microsoft AppCenter](https://appcenter.ms/)"
-msgstr "[Майкрософт AppCenter](https://appcenter.ms/)"
+msgstr ""
 
 #. type: Plain text
 #: ./readme.md:12
 msgid "[Microsoft AppCenter API](https://openapi.appcenter.ms/#/)"
-msgstr "[Майкрософт AppCenter API](https://openapi.appcenter.ms/#/)"
+msgstr ""
 
 #. type: Title ##
 #: ./readme.md:13
 #, no-wrap
 msgid "Usage"
-msgstr "Использование"
+msgstr ""
 
 #. type: Plain text
 #: ./readme.md:16
@@ -74,9 +72,6 @@ msgid ""
 "Run register-token.ps1 and enter the 40-character token. Token generated in "
 "AppCenter user settings.\n"
 msgstr ""
-"1. Для большей безопасности токен теперь хранится в переменной окружения.\n"
-"Запустите register-token.ps1 и введите 40-символьный токен. Токен "
-"генерируется в настройках AppCenter.\n"
 
 #. type: Plain text
 #: ./readme.md:22
@@ -88,66 +83,61 @@ msgid ""
 "```\n"
 "3. Run script\n"
 msgstr ""
-"2. Введите имя приложения в builder.ps1.\n"
-"```powershell\n"
-"[string] $applicationName = \"Example-Application\"\n"
-"```\n"
-"3. запустите скрипт\n"
 
 #. type: Title ##
 #: ./readme.md:23
 #, no-wrap
 msgid "Documentation"
-msgstr "Документация"
+msgstr ""
 
 #. type: Title ###
 #: ./readme.md:25
 #, no-wrap
 msgid "Before Try { } block:"
-msgstr "До блока Try { }:"
+msgstr ""
 
 #. type: Title ####
 #: ./readme.md:27
 #, no-wrap
 msgid "1. Initialize variables"
-msgstr "1. Инициализируйте переменные"
+msgstr ""
 
 #. type: Plain text
 #: ./readme.md:30
 msgid "[string] $apiTokenFA - Full Access Authorize Token"
-msgstr "[string] $apiTokenFA - Токен для полного доступа"
+msgstr ""
 
 #. type: Plain text
 #: ./readme.md:32
 msgid "[string] $apiTokenRO - Read Only Authorize Token"
-msgstr "[string] $apiTokenRO - Токен для доступа только для чтения"
+msgstr ""
 
 #. type: Plain text
 #: ./readme.md:34
 msgid "[string] $applicationName - Microsoft AppCneter - Application Name"
-msgstr "[string] $applicationName - Microsoft AppCneter - Имя приложения"
+msgstr ""
 
 #. type: Plain text
 #: ./readme.md:36
 msgid "[int] $sleepInSeconds - Build ineration checking time in seconds."
-msgstr "[int] $sleepInSeconds - Время в секундах между проверками билда."
+msgstr ""
 
 #. type: Plain text
 #: ./readme.md:38
 msgid "Also set the pathes for logs and report templates."
-msgstr "Так же определяются пути для логов и шаблон отчета."
+msgstr ""
 
 #. type: Title ####
 #: ./readme.md:39
 #, no-wrap
 msgid "2. Functions"
-msgstr "2. Методы"
+msgstr ""
 
 #. type: Title #####
 #: ./readme.md:41
 #, no-wrap
 msgid "Create-Folders { }"
-msgstr "Метод Create-Folders { }"
+msgstr ""
 
 #. type: Plain text
 #: ./readme.md:44
@@ -155,57 +145,53 @@ msgid ""
 "Check the availability of logs and reports directories . If absent - create "
 "it."
 msgstr ""
-"Проверяет доступность директорий для записи логов и отчетов. Если недоступны "
-"- создает их."
 
 #. type: Title #####
 #: ./readme.md:45
 #, no-wrap
 msgid "Get-API-Response { }"
-msgstr "Метод Get-API-Response { }"
+msgstr ""
 
 #. type: Bullet: '1. '
 #: ./readme.md:52
 msgid "Set AppCenter API root url"
-msgstr "Выставить AppCenter API root url"
+msgstr ""
 
 #. type: Bullet: '2. '
 #: ./readme.md:52
 msgid "Set HTTP Headers varitable"
-msgstr "Определяется HTTP заголовок"
+msgstr ""
 
 #. type: Bullet: '3. '
 #: ./readme.md:52
 msgid "Initiate SSL connection (TLS 1.2)"
-msgstr "Инициализация SSL соединения (TLS 1.2)"
+msgstr ""
 
 #. type: Bullet: '4. '
 #: ./readme.md:52
 msgid "Choosing which method to use: GET of POST. If post - add \"Content-Type\""
 msgstr ""
-"Выбор используемого метода: GET или POST. Если POST - добавляется \"Content-"
-"Type\""
 
 #. type: Bullet: '5. '
 #: ./readme.md:52
 msgid "Write the Log"
-msgstr "Пишет в лог"
+msgstr ""
 
 #. type: Bullet: '6. '
 #: ./readme.md:52
 msgid "Return JSON type Response"
-msgstr "Возвращает ответ в формате JSON"
+msgstr ""
 
 #. type: Title #####
 #: ./readme.md:53
 #, no-wrap
 msgid "Build-Task { }"
-msgstr "Build-Task { }"
+msgstr ""
 
 #. type: Bullet: '1. '
 #: ./readme.md:60
 msgid "Use Try block"
-msgstr "Внутри блока Try"
+msgstr ""
 
 #. type: Bullet: '2. '
 #: ./readme.md:60
@@ -225,7 +211,7 @@ msgstr ""
 #. type: Bullet: '5. '
 #: ./readme.md:60
 msgid "Return result"
-msgstr "Возвращает результат"
+msgstr ""
 
 #. type: Bullet: '6. '
 #: ./readme.md:60
@@ -253,7 +239,7 @@ msgstr ""
 #. type: Bullet: '3. '
 #: ./readme.md:66
 msgid "Set Report file name"
-msgstr "Определяем имя отчета"
+msgstr ""
 
 #. type: Bullet: '4. '
 #: ./readme.md:66
@@ -267,18 +253,18 @@ msgstr ""
 #: ./readme.md:67
 #, no-wrap
 msgid "Inside Catch { } block"
-msgstr "Внутри блока Catch { }"
+msgstr ""
 
 #. type: Plain text
 #: ./readme.md:69
 msgid "To catch exceptions and write to the log."
-msgstr "Отлавливает исключения и записывает в лог."
+msgstr ""
 
 #. type: Title ###
 #: ./readme.md:70
 #, no-wrap
 msgid "Inside Finally { } block"
-msgstr "Внутри блока Finally { }"
+msgstr ""
 
 #. type: Plain text
 #: ./readme.md:71
@@ -286,20 +272,14 @@ msgid ""
 "Reset some variables, to avoid errors when running the script in the same "
 "environment PowerShell"
 msgstr ""
-"Обнуление переменных, чтобы избежать проблем при запуске скрипта в окружении "
-"PowerShell"
 
 #. type: Title #
 #: ./r2.md:1
 #, no-wrap
 msgid "Test md file"
-msgstr "Тестовый md файл"
+msgstr ""
 
 #. type: Plain text
 #: ./r2.md:7
 msgid "Hello weblate ```bash mv /etc /tpm ``` - hurr - durr"
 msgstr ""
-"Привет веблейт\n"
-"```bash mv /etc /tpm ```\n"
-"- хурр\n"
-"- дурр"
