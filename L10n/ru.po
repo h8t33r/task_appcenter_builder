@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-03-10 07:53+0000\n"
-"PO-Revision-Date: 2020-03-11 07:50+0000\n"
+"PO-Revision-Date: 2020-03-11 08:15+0000\n"
 "Last-Translator: Igor Tsarkov <igor.tsarkov@zyfra.com>\n"
 "Language-Team: Russian <http://192.168.101.38/projects/test/markdown-doc/ru/>"
 "\n"
@@ -194,7 +194,7 @@ msgstr "Пишет в лог"
 #. type: Bullet: '6. '
 #: ./readme.md:52
 msgid "Return JSON type Response"
-msgstr ""
+msgstr "Возвращает ответ в формате JSON"
 
 #. type: Title #####
 #: ./readme.md:53
